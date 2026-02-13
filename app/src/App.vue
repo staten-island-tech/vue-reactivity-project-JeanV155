@@ -1,25 +1,35 @@
 <template>
   <div>
 <h2> dumpling maker </h2>
+<div class=".container"></div>
+<img src="" alt="">
   </div>
+  <li v-for="topping in DumplingArray" :key="name"></li>
 </template>
 
 <script setup>
 DumplingArray = [
-  {name: 'lamd', traditional: 'very'}
-  ,{name: 'beef', traditional: 'very'}
-  ,{name: 'chicken', traditional: 'very'}
-  ,{name: 'peppers', traditional: 'very'}
-  ,{name: 'soup', traditional: 'kinda'}
-  ,{name: 'tofu', traditional: 'kinda'}
-  ,{name: 'pork', traditional: 'very'}
-  ,{name: 'spinach', traditional: 'kinda'}
-  ,{name: 'cherry', traditional: 'not really'}
-  ,{name: 'shrimp', traditional: 'kinda'}
+  {name: 'lamd', traditional: 'very', price: '5 USD'}
+  ,{name: 'beef', traditional: 'very', price: '7 USD'}
+  ,{name: 'chicken', traditional: 'very', price: '10 USD'}
+  ,{name: 'peppers', traditional: 'very', price: '2 USD'}
+  ,{name: 'soup', traditional: 'kinda', price: '4 USD'}
+  ,{name: 'tofu', traditional: 'kinda', price: '1 USD'}
+  ,{name: 'pork', traditional: 'very', price:'8 USD'}
+  ,{name: 'spinach', traditional: 'kinda', price: '1 USD'}
+  ,{name: 'cherry', traditional: 'not really', price: '1 USD'}
+  ,{name: 'shrimp', traditional: 'kinda', price: '6 USD'}
 ]
+
 
 </script>
 
 <style lang="scss" scoped>
-
+.card-img {
+  width: 100%;
+  height: 200px;           
+  object-fit: cover;     
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 </style>
