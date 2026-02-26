@@ -4,12 +4,13 @@
 <div class=".container"></div>
 <img src="" alt="">
   </div>
-  <li v-for="topping in DumplingArray" :key="name"></li>
+  <fillingcard v-for="filling in fillings " :key="filling.name" :filling = "filling">{{ filling.name }}</fillingcard>
 </template>
 
 <script setup>
-DumplingArray = [
-  {name: 'lamd', traditional: 'very', price: '5 USD'}
+import fillingcard from '@/components/cardsview.vue'
+const fillings = [
+  {name: 'lamb', traditional: 'very', price: '5 USD'}
   ,{name: 'beef', traditional: 'very', price: '7 USD'}
   ,{name: 'chicken', traditional: 'very', price: '10 USD'}
   ,{name: 'peppers', traditional: 'very', price: '2 USD'}
