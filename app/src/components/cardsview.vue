@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h2>{{ filling.name }}</h2>
-     
+        <h1>{{ filling.name }}</h1><h2>{{ filling.traditional }}</h2><h3>{{ filling.price }}</h3>
+        <img :src="filling.img" alt=""/>
+        <button @click="buy"></button>
     </div>
 
 </template>
@@ -13,6 +14,7 @@ defineProps({
         required: true,
     },
 })
+
 </script>
 
 <style  scoped>

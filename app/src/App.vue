@@ -4,13 +4,15 @@
 <div class=".container"></div>
 <img src="" alt="">
   </div>
-  <fillingcard v-for="filling in fillings " :key="filling.name" :filling = "filling">{{ filling.name }}</fillingcard>
+  <fillingcard v-for="filling in fillings " :key="filling.name" :filling = "filling"></fillingcard>
+  
 </template>
 
 <script setup>
 import fillingcard from '@/components/cardsview.vue'
+
 const fillings = [
-  {name: 'lamb', traditional: 'very', price: '5 USD'}
+  {name: 'lamb', traditional: 'very', price: '5 USD', img}
   ,{name: 'beef', traditional: 'very', price: '7 USD'}
   ,{name: 'chicken', traditional: 'very', price: '10 USD'}
   ,{name: 'peppers', traditional: 'very', price: '2 USD'}
@@ -25,7 +27,7 @@ const fillings = [
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .card-img {
   width: 100%;
   height: 200px;           
