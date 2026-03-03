@@ -4,8 +4,10 @@
 <div class=".container"></div>
 <img src="" alt="">
   </div>
-  <fillingcard v-for="filling in fillings " :key="filling.name" :filling = "filling"></fillingcard>
-  <button @click="cartAdd"></button>
+  <fillingcard v-for="filling in fillings " :key="filling.name" :filling = "filling">
+    <button @click="cartAdd">{{ filling.price }}</button>
+  </fillingcard>
+  
 </template>
 
 <script setup>

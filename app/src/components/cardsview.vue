@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h1>{{ filling.name }}</h1><h2>{{ filling.traditional }}</h2><h3>{{ filling.price }}</h3>
+        <h1>{{ filling.name }}</h1><h2>{{ filling.traditional }}</h2>
         <img :src="filling.img" alt=""/>
-        <button @click="buy"></button>
+        <slot></slot>
     </div>
 
 </template>
