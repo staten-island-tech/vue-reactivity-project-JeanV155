@@ -28,6 +28,8 @@ const fillings = [
 ]
 
 
+const price = ref([])
+function orderAdd(idea){}
 
 </script>
 
