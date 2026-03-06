@@ -8,7 +8,10 @@
     <button @click="cartAdd(filling.price)">{{ filling.price }} USD</button>
   </fillingcard>
  
-  
+  <h3> your order </h3>
+  <ul>
+    <li v-for="value in source"</li>
+  </ul>
 </template>
 
 <script setup>
@@ -29,15 +32,8 @@ const fillings = [
 ]
 
 
-const price = ref([])
-const total = ref(0)
 
-function cartAdd(idea){
-  price.value.push(idea)
-total =+ fillings.price
-renderprice();
-  
-}
+
 
 
 
